@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: Onboarding de Clientes no SharePoint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border-left: 4px solid;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .flow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #94A3B8;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold leading-tight text-slate-900">Fluxo de Onboarding de Clientes no SharePoint</h1>
+            <p class="mt-2 text-slate-500">Um guia visual para a integração de novos clientes na plataforma.</p>
+        </div>
+    </header>
+
+    <main class="py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+            <section id="overview">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-slate-800">Visão Geral do Processo</h2>
+                    <p class="mt-2 text-lg text-slate-600">O processo de onboarding é composto por 3 fases distintas, totalizando 9 passos essenciais.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center justify-center">
+                        <div class="chart-container" style="height: 250px; max-height: 250px;">
+                            <canvas id="processPhasesChart"></canvas>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4 text-slate-800">Composição do Processo</h3>
+                        <p class="text-slate-500">Cada fase representa uma parte igual do esforço total de onboarding.</p>
+                    </div>
+                    <div class="bg-[#005F73] text-white p-6 rounded-xl shadow-lg flex flex-col items-center justify-center">
+                        <span class="text-7xl font-bold">3</span>
+                        <h3 class="text-2xl font-semibold mt-2">Fases Principais</h3>
+                        <p class="mt-1 opacity-90">Acesso, Geração e Configuração.</p>
+                    </div>
+                    <div class="bg-[#EE9B00] text-white p-6 rounded-xl shadow-lg flex flex-col items-center justify-center">
+                        <span class="text-7xl font-bold">9</span>
+                        <h3 class="text-2xl font-semibold mt-2">Passos Totais</h3>
+                        <p class="mt-1 opacity-90">Desde a solicitação inicial até a entrega final.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-slate-200">
+
+            <section id="detailed-process">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl font-bold text-slate-800">O Processo Detalhado</h2>
+                    <p class="mt-2 text-lg text-slate-600">Siga cada passo para garantir uma integração bem-sucedida.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <div class="flex flex-col items-center">
+                        <div class="w-full">
+                            <h3 class="text-xl font-bold text-center mb-4 text-[#005F73]">Fase 1: Liberação de Acesso</h3>
+                            <div class="space-y-4">
+                                <div class="flow-card" style="border-color: #0A9396;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">📧</span>1. Listar E-mails</p>
+                                    <p class="mt-1 text-slate-600">Compile a lista de usuários do cliente que precisarão de acesso.</p>
+                                </div>
+                                <div class="text-center flow-arrow">↓</div>
+                                <div class="flow-card" style="border-color: #0A9396;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">🎫</span>2. Abrir Chamado de TI</p>
+                                    <p class="mt-1 text-slate-600">Solicite à Oitonet a criação dos usuários como convidados.</p>
+                                </div>
+                                <div class="text-center flow-arrow">↓</div>
+                                <div class="flow-card" style="border-color: #0A9396;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">✅</span>3. Acesso Confirmado</p>
+                                    <p class="mt-1 text-slate-600">Aguarde a confirmação para prosseguir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-full">
+                            <h3 class="text-xl font-bold text-center mb-4 text-[#CA6702]">Fase 2: Geração do Link</h3>
+                            <div class="space-y-4">
+                                <div class="flow-card" style="border-color: #EE9B00;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">🐍</span>1. Copiar Script</p>
+                                    <p class="mt-1 text-slate-600">Duplique um script Python modelo para iniciar.</p>
+                                </div>
+                                <div class="text-center flow-arrow">↓</div>
+                                <div class="flow-card" style="border-color: #EE9B00;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">✏️</span>2. Editar Filtro</p>
+                                    <p class="mt-1 text-slate-600">Insira o nome do novo cliente no campo de filtro do script.</p>
+                                </div>
+                                <div class="text-center flow-arrow">↓</div>
+                                <div class="flow-card" style="border-color: #EE9B00;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">🔗</span>3. Gerar Link</p>
+                                    <p class="mt-1 text-slate-600">Execute o script para criar o link exclusivo do dashboard.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-full">
+                             <h3 class="text-xl font-bold text-center mb-4 text-[#9B2226]">Fase 3: Configuração da Página</h3>
+                             <div class="space-y-4">
+                                <div class="flow-card" style="border-color: #AE2012;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">📄</span>1. Duplicar Página</p>
+                                    <p class="mt-1 text-slate-600">Copie uma página de cliente existente no SharePoint.</p>
+                                </div>
+                                <div class="text-center flow-arrow">↓</div>
+                                <div class="flow-card" style="border-color: #AE2012;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">🎨</span>2. Personalizar Página</p>
+                                    <p class="mt-1 text-slate-600">Atualize com a logo e tema do cliente.</p>
+                                </div>
+                                <div class="text-center flow-arrow">↓</div>
+                                <div class="flow-card" style="border-color: #AE2012;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">🖼️</span>3. Incorporar Link</p>
+                                    <p class="mt-1 text-slate-600">Insira o link do dashboard na página.</p>
+                                </div>
+                                <div class="text-center flow-arrow">↓</div>
+                                <div class="flow-card" style="border-color: #AE2012;">
+                                    <p class="font-bold text-lg"><span class="text-2xl mr-2">📌</span>4. Criar Atalho</p>
+                                    <p class="mt-1 text-slate-600">Adicione um "Link Rápido" na home do portal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-slate-200">
+
+            <section id="metrics">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-slate-800">Métricas de Eficiência (SLA)</h2>
+                    <p class="mt-2 text-lg text-slate-600">Tempo médio estimado para a conclusão de cada fase do processo.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="chart-container" style="height: 400px; max-height: 500px;">
+                        <canvas id="slaChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Y3 Gestão. Todos os direitos reservados.</p>
+            <p class="text-sm text-slate-400 mt-1">Infográfico gerado para otimização de processos internos.</p>
+        </div>
+    </footer>
+
+    <script>
+        function wrapLabel(label, maxWidth) {
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        }
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const processPhasesCtx = document.getElementById('processPhasesChart').getContext('2d');
+        new Chart(processPhasesCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Liberação de Acesso', 'Geração do Link', 'Configuração da Página'],
+                datasets: [{
+                    label: 'Fases do Processo',
+                    data: [1, 1, 1],
+                    backgroundColor: ['#0A9396', '#EE9B00', '#AE2012'],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#475569',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        const slaCtx = document.getElementById('slaChart').getContext('2d');
+        const slaLabels = [
+            'Liberação de Acesso do Cliente',
+            'Geração do Link do Dashboard via Script',
+            'Configuração da Página no SharePoint'
+        ];
+        
+        const wrappedSlaLabels = slaLabels.map(label => wrapLabel(label, 16));
+
+        new Chart(slaCtx, {
+            type: 'bar',
+            data: {
+                labels: wrappedSlaLabels,
+                datasets: [{
+                    label: 'Tempo Médio (horas)',
+                    data: [24, 1, 2],
+                    backgroundColor: ['#0A9396', '#EE9B00', '#AE2012'],
+                    borderColor: ['#005F73', '#CA6702', '#9B2226'],
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Horas',
+                            color: '#475569',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                           color: '#475569'
+                        }
+                    },
+                    y: {
+                       ticks: {
+                           color: '#475569',
+                           font: {
+                               size: 14
+                           }
+                       }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
