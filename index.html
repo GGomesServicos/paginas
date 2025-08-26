@@ -12,106 +12,129 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        .hero-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        .hero-pattern {
+            background-color: #111827; /* bg-gray-900 */
+            background-image: radial-gradient(#374151 1px, transparent 1px);
+            background-size: 20px 20px;
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 
     <!-- Header -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-800">GGomes Serviços</div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#servicos" class="text-gray-600 hover:text-blue-600">Serviços</a>
-                <a href="#sobre" class="text-gray-600 hover:text-blue-600">Sobre</a>
-                <a href="#contato" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Contato</a>
+            <div class="text-2xl font-bold text-gray-800 tracking-wider">GGOMES</div>
+            <div>
+                <a href="#contato" class="bg-blue-600 text-white font-bold py-2 px-5 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Fale Comigo
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-bg text-white">
-        <div class="container mx-auto px-6 py-24 text-center">
+    <header class="hero-pattern text-white">
+        <div class="container mx-auto px-6 pt-24 pb-32 text-center">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-                Tecnologia que Impulsiona seu Negócio.
+                Soluções em tecnologia que simplificam o complexo.
             </h1>
-            <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-                Consultoria especializada em arquitetura de soluções e otimização de dados para pequenas e médias empresas.
+            <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Eu ajudo sua empresa a parar de "apagar incêndios" e a construir uma estrutura de dados que gera resultados reais.
             </p>
-            <a href="#servicos" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-200 transition duration-300 text-lg">
-                Conheça minhas soluções
+            <a href="#abordagem" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-200 transition duration-300 text-lg">
+                Conheça minha abordagem
             </a>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-16">
+    <main class="container mx-auto px-6 -mt-16">
 
-        <!-- Seção de Serviços -->
-        <section id="servicos" class="mb-20">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Como posso ajudar sua empresa</h2>
-            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-                Meu foco é resolver gargalos operacionais e transformar dados em um ativo estratégico para o seu crescimento.
-            </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1: Arquitetura de Soluções -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
-                    <h3 class="text-xl font-bold mb-3 text-gray-800">Arquitetura de Soluções</h3>
-                    <p class="text-gray-600 mb-6">
-                        Desenho sistemas e fluxos de trabalho eficientes que se adaptam às necessidades do seu negócio, garantindo escalabilidade e segurança.
+        <!-- Seção de Problemas -->
+        <section id="problemas" class="mb-24">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-gray-200 text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Sistemas que não conversam?</h3>
+                    <p class="text-gray-600">
+                        Crio pontes entre suas ferramentas, unificando informações e eliminando a duplicidade de trabalho.
                     </p>
                 </div>
-                
-                <!-- Card 2: Otimização de Dados -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
-                    <h3 class="text-xl font-bold mb-3 text-gray-800">Otimização de Dados para BI</h3>
-                    <p class="text-gray-600 mb-6">
-                        Estruturo a coleta, o tratamento e a integração de dados para alimentar ferramentas como o Power BI com informações confiáveis e em tempo real.
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-gray-200 text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Relatórios que demoram dias?</h3>
+                    <p class="text-gray-600">
+                        Automatizo a coleta de dados para que suas análises de BI sejam instantâneas e sempre confiáveis.
                     </p>
                 </div>
-
-                <!-- Card 3: Consultoria Estratégica -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
-                    <h3 class="text-xl font-bold mb-3 text-gray-800">Consultoria Estratégica</h3>
-                    <p class="text-gray-600 mb-6">
-                        Analiso seus processos atuais e proponho as melhores soluções tecnológicas para aumentar a produtividade e a tomada de decisão.
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-gray-200 text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Processos manuais e repetitivos?</h3>
+                    <p class="text-gray-600">
+                        Desenho fluxos automatizados que liberam sua equipe para focar no que realmente importa: a estratégia.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Sobre / Proposta -->
-        <section id="sobre" class="mb-20 bg-white p-12 rounded-xl shadow-lg border border-gray-200 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Um Problema, Uma Solução Detalhada</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-                Para ilustrar minha abordagem, preparei uma análise detalhada sobre como otimizar o fluxo de dados para Business Intelligence, um desafio comum em empresas de engenharia.
+        <!-- Seção Minha Abordagem -->
+        <section id="abordagem" class="mb-24 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Como eu Trabalho</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                Meu processo é transparente e focado em gerar valor real, sem jargões técnicos desnecessários.
             </p>
-            <!-- ESTE É O LINK PARA A SUA PÁGINA DE PROPOSTA -->
+            <div class="grid md:grid-cols-3 gap-4 text-left max-w-5xl mx-auto">
+                <!-- Etapa 1 -->
+                <div class="p-6">
+                    <div class="text-blue-600 font-extrabold text-4xl mb-2">01</div>
+                    <h3 class="text-xl font-bold mb-2">Diagnóstico</h3>
+                    <p class="text-gray-600">Primeiro, eu mergulho no seu negócio para entender seus objetivos, processos e os desafios que você enfrenta no dia a dia.</p>
+                </div>
+                <!-- Etapa 2 -->
+                <div class="border-t-2 md:border-t-0 md:border-l-2 border-gray-200 p-6">
+                    <div class="text-blue-600 font-extrabold text-4xl mb-2">02</div>
+                    <h3 class="text-xl font-bold mb-2">Desenho da Arquitetura</h3>
+                    <p class="text-gray-600">Com base no diagnóstico, eu desenho uma solução sob medida, explicando de forma clara como a tecnologia irá resolver seus problemas.</p>
+                </div>
+                <!-- Etapa 3 -->
+                <div class="border-t-2 md:border-t-0 md:border-l-2 border-gray-200 p-6">
+                    <div class="text-blue-600 font-extrabold text-4xl mb-2">03</div>
+                    <h3 class="text-xl font-bold mb-2">Implementação e Suporte</h3>
+                    <p class="text-gray-600">Eu implemento a solução e garanto que sua equipe saiba como usá-la, oferecendo o suporte necessário para uma transição tranquila.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Estudo de Caso (CTA para a Proposta) -->
+        <!--
+        <section id="estudo-de-caso" class="mb-24 bg-gray-800 text-white p-12 rounded-xl text-center">
+            <h2 class="text-3xl font-bold mb-4">Veja um Estudo de Caso</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                Preparei uma análise detalhada de como otimizei o fluxo de dados para uma empresa de engenharia, transformando planilhas e sistemas em uma fonte de inteligência de negócios.
+            </p>
             <a href="apresentação_draft_solutions.html" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300 text-lg">
-                Conheça mais sobre mim
+                Ler o estudo de caso
             </a>
         </section>
+        -->
 
         <!-- Seção de Contato -->
         <section id="contato" class="text-center">
             <h2 class="text-3xl font-bold text-gray-800 mb-4">Vamos conversar?</h2>
             <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Estou à disposição para entender seus desafios e discutir como a tecnologia pode ajudar a alcançar seus objetivos.
+                Envie uma mensagem e vamos agendar um bate-papo de 20 minutos para eu entender como posso ajudar.
             </p>
             <div class="bg-white inline-block p-6 rounded-lg shadow-md border">
                 <p class="font-bold text-xl text-gray-800">[Seu Nome Completo]</p>
-                <p class="text-gray-600 mt-1">[seu.email@exemplo.com]</p>
-                <p class="text-gray-600">[Seu Telefone]</p>
+                <p class="text-gray-600 mt-1">[seu.email@exemplo.com] | [Seu Telefone]</p>
             </div>
         </section>
 
     </main>
 
-    <footer class="text-center py-8 mt-16 bg-gray-800 text-gray-400">
-        <p>&copy; 2024 GGomes Serviços. Todos os direitos reservados.</p>
+    <footer class="text-center py-8 mt-16 bg-gray-900 text-gray-400">
+        <p>&copy; 2024 GGomes Serviços. Tecnologia a serviço do seu negócio.</p>
     </footer>
 
 </body>
 </html>
-
